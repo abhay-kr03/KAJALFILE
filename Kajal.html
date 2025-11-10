@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kajal Kumari | B.Tech Portfolio</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
+      /* Background Animation (Floating Gradient Blobs) */
+      .floating-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -10;
+        background: radial-gradient(circle at 30% 20%, rgba(99, 102, 241, 0.25), transparent 70%),
+          radial-gradient(circle at 70% 80%, rgba(236, 72, 153, 0.25), transparent 70%);
+        animation: floatBackground 8s infinite alternate ease-in-out;
+      }
+      @keyframes floatBackground {
+        from {
+          transform: translate(0, 0);
+        }
+        to {
+          transform: translate(-30px, 20px);
+        }
+      }
+
+      /* Floating Particles */
+      .particles {
+        position: fixed;
+        inset: 0;
+        z-index: -5;
+        overflow: hidden;
+      }
+      .particle {
+        position: absolute;
+        background: rgba(99, 102, 241, 0.4);
+        border-radius: 50%;
+        animation: floatParticle 10s infinite ease-in-out;
+      }
+      @keyframes floatParticle {
+        0% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-800px);
+          opacity: 0;
+        }
+      }
+
+      /* Glow Hover */
+      .glow {
+        box-shadow: 0 0 20px rgba(99, 102, 241, 0.6);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+      .glow:hover {
+        transform: scale(1.08);
+        box-shadow: 0 0 35px rgba(99, 102, 241, 0.9);
+      }
+
+      /* Glass Effect */
+      .glass {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      /* Typewriter */
+      .typewriter {
+        overflow: hidden;
+        border-right: 2px solid white;
+        white-space: nowrap;
+        animation: typing 4s steps(30, end), blink 0.8s step-end infinite;
+        width: fit-content;
+        margin: 0 auto;
+      }
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+      @keyframes blink {
+        50% {
+          border-color: transparent;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-gradient-to-br from-indigo-100 via-white to-pink-100 text-gray-900">
+    <div class="floating-bg"></div>
+    <div class="particles"></div>
+
+    <!-- Header -->
+    <header
+      class="bg-gradient-to-r from-indigo-600 to-pink-500 text-white py-12 text-center shadow-lg relative"
+      data-aos="fade-down"
+    >
+      <img
+        src="./WhatsApp Image 2025-11-10 at 22.10.04_48cec002.jpg"
+        alt="Kajal Kumari"
+        class="w-36 h-44 mx-auto rounded-xl border-4 border-white glow mb-4"
+      />
+      <h1 class="text-4xl font-extrabold">Kajal Kumari</h1>
+      <p class="mt-2 text-base typewriter">
+        B.Tech 2nd Year | Web Developer | Tech Explorer 🚀
+      </p>
+    </header>
+
+    <main class="max-w-5xl mx-auto p-6 space-y-10">
+      <!-- About -->
+      <section data-aos="fade-up" class="glass rounded-2xl shadow p-6 hover:shadow-xl transition-all">
+        <h2 class="text-2xl font-bold text-indigo-700 mb-3">👩‍💻 About Me</h2>
+        <p class="text-gray-800 leading-relaxed">
+          Hello! I'm <strong>Kajal Kumari</strong>, a passionate
+          <strong>B.Tech 2nd Year Student</strong> who enjoys exploring new technologies, building projects, and constantly
+          improving through hands-on practice and learning.
+        </p>
+        <ul class="mt-4 text-sm grid sm:grid-cols-2 gap-2 text-gray-700">
+          <li>🎯 Goal: Become a Full Stack Developer</li>
+          <li>💻 Skills: C, C++, Python, HTML, CSS, JavaScript</li>
+          <li>🏫 College: Graphic Era Hill University</li>
+          <li>🌍 Interests: Web Dev, AI, and Innovation</li>
+        </ul>
+      </section>
+
+      <!-- Highlights -->
+      <section data-aos="fade-up" class="glass rounded-2xl shadow p-6 hover:shadow-xl transition-all">
+        <h2 class="text-2xl font-bold text-indigo-700 mb-3">🏆 Highlights & Achievements</h2>
+        <ul class="list-disc pl-5 space-y-1 text-gray-800">
+          <li>Completed 50+ lab experiments with strong conceptual learning.</li>
+          <li>Built this interactive portfolio with Tailwind & JS.</li>
+          <li>Participated in multiple technical workshops and hackathons.</li>
+          <li>Exploring creative UI/UX designs and animations.</li>
+        </ul>
+      </section>
+
+      <!-- Learning Progress -->
+      <section data-aos="fade-up" class="glass rounded-2xl shadow p-6 hover:shadow-xl transition-all text-center">
+        <h2 class="text-2xl font-bold text-indigo-700 mb-3">📈 Learning Progress</h2>
+        <div class="w-3/4 mx-auto bg-gray-200 rounded-full h-4 mb-3">
+          <div
+            class="bg-gradient-to-r from-indigo-600 to-pink-500 h-4 rounded-full text-xs text-white text-center"
+            style="width: 85%"
+          >
+            85%
+          </div>
+        </div>
+        <p class="text-sm text-gray-700">Constantly growing through projects and self-learning.</p>
+      </section>
+
+      <!-- Lab Learnings -->
+      <section id="labs" data-aos="fade-up" class="glass rounded-2xl shadow p-6 hover:shadow-xl transition-all">
+        <h2 class="text-2xl font-bold text-indigo-700 mb-3 text-center">📘 50 Learnings from Labs</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3" id="labGrid"></div>
+      </section>
+
+      <!-- Video -->
+      <section
+        id="video"
+        data-aos="zoom-in-up"
+        class="glass rounded-2xl shadow p-8 text-center hover:shadow-2xl transition-all"
+      >
+        <h2 class="text-2xl font-bold text-indigo-700 mb-3">🎬 My Introduction Video</h2>
+        <p class="text-gray-700 mb-4">Click below to watch my video introduction:</p>
+        <a
+          href="./WhatsApp Video 2025-11-10 at 21.41.40_b7de858c.mp4"
+          target="_blank"
+          class="inline-block bg-gradient-to-r from-indigo-600 to-pink-500 text-white px-8 py-3 rounded-full hover:scale-110 transition-all shadow-lg"
+          >🎥 Watch Video</a
+        >
+      </section>
+
+      <!-- PPT -->
+      <section
+        id="ppt"
+        data-aos="zoom-in-up"
+        class="glass rounded-2xl shadow p-8 text-center hover:shadow-2xl transition-all"
+      >
+        <h2 class="text-2xl font-bold text-indigo-700 mb-3">📊 PowerPoint Presentation</h2>
+        <p class="text-gray-700 mb-4">View or download my project presentation:</p>
+        <a
+          href="./Kajal.kri.pptx"
+          target="_blank"
+          class="inline-block bg-green-600 text-white px-8 py-3 rounded-full hover:scale-110 transition-all shadow-lg"
+          >📂 View PPT</a
+        >
+      </section>
+
+      <!-- Handwritten Notes -->
+      <section
+        id="handwritten"
+        data-aos="zoom-in-up"
+        class="glass rounded-2xl shadow p-8 text-center hover:shadow-2xl transition-all"
+      >
+        <h2 class="text-2xl font-bold text-indigo-700 mb-3">📝 Handwritten Assignments</h2>
+        <p class="text-gray-700 mb-4">View my handwritten assignments and lab work:</p>
+        <a
+          href="./DocScanner 10 Nov 2025 9-58 pm.pdf"
+          target="_blank"
+          class="inline-block bg-pink-600 text-white px-8 py-3 rounded-full hover:scale-110 transition-all shadow-lg"
+          >📖 View Notes</a
+        >
+      </section>
+
+      <!-- LinkedIn -->
+      <section data-aos="fade-up" class="glass rounded-2xl shadow p-6 text-center hover:shadow-xl transition-all">
+        <h2 class="text-2xl font-bold text-indigo-700 mb-3">🔗 Connect with Me</h2>
+        <a
+          href="#"
+          target="_blank"
+          class="text-indigo-600 underline text-lg hover:text-pink-600 transition-all"
+          >Visit my LinkedIn Profile</a
+        >
+      </section>
+
+      <!-- Contact -->
+      <section data-aos="fade-up" class="glass rounded-2xl shadow p-6 text-center hover:shadow-xl transition-all">
+        <h2 class="text-2xl font-bold text-indigo-700 mb-3">📞 Contact</h2>
+        <p>Email: <strong>kajal@example.com</strong></p>
+        <p>College: Graphic Era Hill University</p>
+      </section>
+    </main>
+
+    <footer class="text-center py-6 text-sm text-gray-700 bg-white/40 mt-10">
+      <p class="animate-pulse">
+        © 2025 Kajal Kumari | Built with 💜 using HTML, Tailwind & JavaScript
+      </p>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000, once: true });
+
+      // Floating Particles
+      const particleContainer = document.querySelector(".particles");
+      for (let i = 0; i < 15; i++) {
+        const particle = document.createElement("div");
+        const size = Math.random() * 10 + 5;
+        particle.className = "particle";
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.top = `${Math.random() * 100}%`;
+        particle.style.animationDuration = `${Math.random() * 8 + 4}s`;
+        particleContainer.appendChild(particle);
+      }
+
+      // Generate Lab Cards
+      const labGrid = document.getElementById("labGrid");
+      for (let i = 1; i <= 50; i++) {
+        const card = document.createElement("div");
+        card.className =
+          "border border-gray-200 rounded-xl p-3 bg-gradient-to-br from-indigo-50 to-pink-50 hover:from-indigo-100 hover:to-pink-100 transition-all duration-300 hover:scale-105 shadow-sm";
+        card.innerHTML = `
+          <strong class='text-indigo-700'>${i}. Lab ${i}</strong>
+          <p class='text-sm text-gray-700 mt-1'>
+            Learned and implemented real coding concepts in Lab ${i}.
+          </p>
+        `;
+        labGrid.appendChild(card);
+      }
+    </script>
+  </body>
+</html>
